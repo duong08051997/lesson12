@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thao tác với mảng</title>
+    <style>
+        body{
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="txtValue"/>
+<input type="button" id="btnAdd" value="Add" onclick="clickAdd();"/>
+<input type="button" id="btnDisplay" value="Display" onclick="clickDisplay();"/>
+<div id="result"></div>
+<script>
+    let array = Array();
+    let x =0;
+    function clickAdd() {
+        array[x] = document.getElementById('btnAdd').value;
+        alert("Element: " + array[x] + " Added at index " + x);
+        x++;
+        document.getElementById('txtValue').value='';
+
+
+    }
+    function clickDisplay() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+
+
+    }
+
+</script>
+</body>
+</html>
